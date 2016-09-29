@@ -43,19 +43,19 @@ if __name__ == '__main__':
 With the above application you can create the database or enable migrations if the database already exists with the following command:
 
     $ python app.py db init
-    
-This will add a `migrations` folder to your application. The contents of this folder need to be added to version control along with your other source files. 
+
+This will add a `migrations` folder to your application. The contents of this folder need to be added to version control along with your other source files.
 
 You can then generate an initial migration:
 
     $ python app.py db migrate
-    
+
 The migration script needs to be reviewed and edited, as Alembic currently does not detect every change you make to your models. In particular, Alembic is currently unable to detect indexes. Once finalized, the migration script also needs to be added to version control.
 
 Then you can apply the migration to the database:
 
     $ python app.py db upgrade
-    
+
 Then each time the database models change repeat the `migrate` and `upgrade` commands.
 
 To sync the database in another system just refresh the `migrations` folder from source control and run the `upgrade` command.
@@ -68,5 +68,5 @@ Resources
 ---------
 
 - [Documentation](http://pythonhosted.org/Flask-Migrate)
-- [pypi](https://pypi.python.org/pypi/Flask-Migrate) 
+- [pypi](https://pypi.python.org/pypi/Flask-Migrate)
 - [Change Log](https://github.com/miguelgrinberg/Flask-Migrate/blob/master/CHANGELOG.md)
